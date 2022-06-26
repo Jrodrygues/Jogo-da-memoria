@@ -1,0 +1,166 @@
+* {
+  margin: 0 auto;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #22272e;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  margin: 24px 0;
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #119cea;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+/* Social Media */
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  max-width: 720px;
+  margin-top: 15px;
+  margin-inline: auto;
+}
+
+.social-media img {
+  width: 50px;
+}
+
+.social-media span {
+  font-size: 20px;
+}
+
+.instagram a,
+.twitter a,
+.github a,
+.linkedin a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: white;
+  text-decoration: none;
+}
+
+.instagram a:hover,
+.twitter a:hover,
+.github a:hover,
+.linkedin a:hover {
+  color: #119cea;
+}
+
+.info {
+  position: fixed;
+  right: 14px;
+  bottom: 22px;
+}
+
+.tooltip {
+  color: #fff;
+  background-color: rgb(15, 15, 15);
+  padding: 10px 8px;
+  border-radius: 6px;
+  position: relative;
+  bottom: 28px;
+  display: none;
+}
+
+.info:hover .tooltip {
+  display: inline;
+}
+
+.sobre {
+  max-width: 850px;
+  background-color: #242424;
+  padding: 5px 14px;
+  border: 1px solid #696969;
+  border-radius: 4px;
+}
+
+.sobre p,
+h1,
+li {
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 150%;
+}
+
+.button {
+  width: 100%;
+  height: 48px;
+  background-color: #119cea;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.button-calcular {
+  background-color: #119cea;
+  height: 48px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 24px;
+  border-radius: 4px;
+}
