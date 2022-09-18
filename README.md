@@ -5,7 +5,6 @@ Projeto desenvolvido no evento da  Digital Innovation One Inc. ( DIO )
 
 ![preview](preview/preview.jpg)
 
-> Trilha Explorer
 
 Projeto construído no bootcamp da DIO
 
